@@ -1,28 +1,12 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Sumlinks from './components/Sumlinks';
-class App extends Component {
- 
- 
-
-  render() {
-    
-    return (
-      <div className="App">
-         
-        <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h2>Welcome to 30 Days of Code</h2>
-        
-        </div>
-        <div className="App-intro">
-          <Sumlinks />
-            
-        </div>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Sumlinks />
+    </div>
+  );
 }
 
 export default App;

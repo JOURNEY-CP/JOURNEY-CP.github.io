@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import sums from '../data/august-2020.json';
 
-export default class Resume extends Component{
+export default class Sumlinks extends Component{
     constructor(props) {
         super(props);
         this.state={
@@ -11,7 +11,7 @@ export default class Resume extends Component{
             
           }
 
-        
+    }
    singleDaySums=props=>(
     sums[props.date].map((sum,i)=>{
       return <a href={sum}>problem{i+1}</a>
@@ -21,9 +21,9 @@ export default class Resume extends Component{
 
    sumSection = () =>(
    
-    [...Array(this.state.currdate.getDate().keys())].map(date=>{
-    <div>
+    [...Array(this.state.currdate.getDate()).keys()].map(date=>{
 
+    return <div>
       <div className="three columns header-col">
           <h1><span>{this.state.months[this.state.currdate.getMonth()]} {date+1},{this.state.currdate.getFullYear()}</span></h1>
       </div>
@@ -44,7 +44,7 @@ export default class Resume extends Component{
    })
    )
       
-    }
+    
     render(){
         return(
             <div className="links">
