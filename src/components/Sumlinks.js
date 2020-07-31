@@ -12,15 +12,15 @@ export default class Sumlinks extends Component{
 
    singleDaySums=props=>(
     sums[props.date].map((sum,i)=>{
-      return <a href={sum}>problem{i+1}</a>
-   },0)
+    return <a className="problem" href={sum}>problem{i+1}</a>
+      },0)
    )
 
    sumSection = () =>(
    
     [...Array(this.state.currdate.getDate()).keys()].reverse().map(date=>{
 
-    return <div>
+    return <div className="currdaysums">
       <div className="three columns header-col">
           <h1><span>{this.state.months[this.state.currdate.getMonth()]} {date+1},{this.state.currdate.getFullYear()}</span></h1>
       </div>
