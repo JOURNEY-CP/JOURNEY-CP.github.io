@@ -1,0 +1,41 @@
+/****************** Sumlinks **************************/
+
+a:link, a:visited {
+    background-color:  #333;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: -100px;
+   
+    }
+
+a:hover, a:active {
+background-color: darkblue;
+}
+
+/* .links a, .links a:visited  { color: #11ABB0; }
+.links a:hover, .links a:focus { color: #313131; } */
+
+.links {
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 72px;
+    overflow: hidden;
+ }
+
+.links .header-col { padding-top: 9px; }
+.links .main-col { padding-right: 10%; }
+
+.links h1 {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: -815px;
+    margin-top: 50px;
+ }
+.links h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+ }
