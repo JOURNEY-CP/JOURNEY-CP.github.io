@@ -1,0 +1,7 @@
+git checkout master
+npm run deploy
+git checkout deployment
+git pull origin gh-pages
+git push
+git checkout master
+echo "SUCESSFULLY DEPLOYED AND CHECKEDOUT TO master"
