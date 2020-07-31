@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import sums from '../data/august-2020.json';
 import '../CSS/layout.css'
+
 export default class Sumlinks extends Component{
     constructor(props) {
         super(props);
         this.state={
             currdate:new Date(),
+
             months:["January","February","March","April","May","June","July","August","September","October","November","December"]
           }
     }
