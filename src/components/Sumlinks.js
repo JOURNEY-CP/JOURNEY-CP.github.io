@@ -14,34 +14,28 @@ export default class Sumlinks extends Component{
 
    singleDaySums=props=>(
         sums[props.date].map((sum,i)=>{
-            return  <a className="problems-list-sum" href={sum}>problem{i+1}</a>
+            return  <a className="problems-list-link" href={sum}>problem{i+1}</a>
         })
    )
 
-   sumSection = () =>(
-    [...Array(this.state.currdate.getDate()).keys()].reverse().map(date=>{
-    return <div className="currdaysums">
-      <div className="three columns header-col">
-          <h1><span>{this.state.months[this.state.currdate.getMonth()]} {date+1},{this.state.currdate.getFullYear()}</span></h1>
-      </div>
-      <div className="nine columns main-col">
-            <div className="row item">
-                <div className="twelve columns problems-list-sums">
-                 <this.singleDaySums date={date+1} />
+    sumSection = () =>(
+        [...Array(this.state.currdate.getDate()).keys()].reverse().map(date=>(
+            <div className="problems-list-single-day">
+                <div className="problems-list-date">
+                    {this.state.months[this.state.currdate.getMonth()]} {date+1},{this.state.currdate.getFullYear()}    
+                </div>
+                <div className="problems-list-links">
+                    <this.singleDaySums date={date+1} />
                 </div>
             </div>
-      </div>
-    </div>
-     
-    
-   })
-   )
+        ))
+    )
   
     render(){
         return(
-                <div className="links">
-                     <this.sumSection />
-                </div>      
+            <div className="problems-list-main">
+                <this.sumSection/>
+            </div>      
         )
     }
 }
